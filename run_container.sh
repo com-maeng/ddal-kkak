@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker run -it \
     --name cuda-0 \
     --publish 8888:8888 \
