@@ -1,0 +1,6 @@
+# Secrets
+user_credentials.csv
+
+# macOS
+.DS_Store
+.localized
