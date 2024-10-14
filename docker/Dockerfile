@@ -18,3 +18,6 @@ conda create -yn yeardream-startup-project python=3.12 && \
     conda activate yeardream-startup-project && \
     conda install -y notebook pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 EOF
+
+# For detached mode
+CMD ["tail", "-f", "/dev/null"]
