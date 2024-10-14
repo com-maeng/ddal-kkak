@@ -1,9 +1,16 @@
 #!/bin/bash
 
+NUM_CONTAINERS=10
+SHM_SIZE=16g
+
+docker build -t yihongju/ddal-kkak:0.1 ./docker
+
+for n in $(seq 0 $((NUM_CONTAINERS - 1)))
+do
 docker run -it \
-    --name cuda-0 \
-    --publish 8888:8888 \
+    --name ddal-kkak-$n \
     --gpus all \
-    --shm-size=16g \
-    yihongju/cuda:0.1 \
+    --shm-size=$SHM_SIZE \
+    yihongju/ddal-kkak:0.1 \
     bash
+done
