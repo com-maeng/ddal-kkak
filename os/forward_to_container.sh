@@ -33,9 +33,6 @@ case "$current_user" in
   user-9)
     docker exec -it ddal-kkak-9 bash
     ;;
-  user-10)
-    docker exec -it ddal-kkak-10 bash
-    ;;
   ubuntu)
     exec /bin/bash
     ;;
