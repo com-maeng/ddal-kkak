@@ -13,5 +13,7 @@ docker run -d \
     --name ddal-kkak-$n \
     --gpus all \
     --shm-size=$SHM_SIZE \
+    --publish $((n + 8888)):8888 \
     yihongju/ddal-kkak:0.1
+bash $DDAL_KKAL_HOME/jupyter/set_jupyter_config.sh
 done
